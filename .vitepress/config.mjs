@@ -64,6 +64,7 @@ export default defineConfig({
           { text: "Roadmap", link: "/roadmap" },
           { text: "Implementations", link: "/implementations" },
           { text: "Get Involved", link: "/get-involved" },
+          { text: "FAQ", link: "/faq" },
           { text: "Resources", link: "/resources" },
         ],
       },
