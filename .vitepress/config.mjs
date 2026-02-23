@@ -25,6 +25,7 @@ export default defineConfig({
       { text: "Roadmap", link: "/roadmap" },
       { text: "Implementations", link: "/implementations" },
       { text: "Get Involved", link: "/get-involved" },
+      { text: "FAQ", link: "/faq" },
       {
         text: "Resources",
         items: [
@@ -45,8 +46,8 @@ export default defineConfig({
             link: "https://developmentseed.org/geozarr-examples/",
           },
           {
-            text: "Zarr Conventions Framework",
-            link: "https://github.com/zarr-conventions/.github/blob/main/profile/README.md",
+            text: "Zarr Conventions Organization",
+            link: "https://github.com/zarr-conventions/",
           },
           {
             text: "OGC SWG Charter",
@@ -56,19 +57,7 @@ export default defineConfig({
       },
     ],
 
-    sidebar: [
-      {
-        text: "About",
-        items: [
-          { text: "Conventions", link: "/conventions" },
-          { text: "Roadmap", link: "/roadmap" },
-          { text: "Implementations", link: "/implementations" },
-          { text: "Get Involved", link: "/get-involved" },
-          { text: "FAQ", link: "/faq" },
-          { text: "Resources", link: "/resources" },
-        ],
-      },
-    ],
+    sidebar: false,
 
     socialLinks: [
       {
@@ -83,8 +72,8 @@ export default defineConfig({
 
     footer: {
       message:
-        'Content under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>. Part of the <a href="https://www.ogc.org/">OGC</a> Standards programme.',
-      copyright: "GeoZarr SWG",
+        'Released under the <a href="https://opensource.org/licenses/MIT">MIT License</a>.',
+      copyright: "Copyright © 2026 GeoZarr Developers",
     },
 
     editLink: {
