@@ -36,7 +36,7 @@ Reference documentation, Jupyter notebook examples, and example datasets demonst
 Browser-based tool for exploring Zarr stores and validating GeoZarr conventions against JSON Schemas. Runs entirely client-side.
 
 - [GitHub](https://github.com/zarr-developers/geozarr-toolkit/tree/main/metazarr)
-- [Online inspector](https://inspec.geozarr.org)
+- [Online inspector](https://inspect.geozarr.org)
 
 ### Zarr-cm
 
