@@ -1,3 +1,7 @@
+---
+description: Frequently asked questions about GeoZarr — what it is, how conventions work, CF compatibility, Zarr V2/V3 support, and available tooling.
+---
+
 # FAQ
 
 ### What is GeoZarr?

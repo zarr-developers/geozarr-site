@@ -1,3 +1,7 @@
+---
+description: Contribute to GeoZarr — join the OGC Standards Working Group, attend monthly meetings, or submit pull requests. No OGC membership required.
+---
+
 # Get Involved
 
 GeoZarr welcomes contributions from anyone — OGC membership is not required.
@@ -36,4 +40,4 @@ Full guide: [CONTRIBUTING.md](https://github.com/zarr-developers/geozarr-spec/bl
 The SWG meets on the **first Wednesday of each month** at 15:00 UTC.
 Meetings focus on strategic discussion and topics lacking consensus.
 
-**Join:** [Google Meet](https://meet.google.com/jth-rstn-fwb) · **Notes:** [HackMD](https://hackmd.io/team/geozarr?nav=overview)
+**Join:** [Google Meet](https://meet.google.com/jth-rstn-fwb) · **Notes:** [Meeting Minutes](https://hackmd.io/team/geozarr/folders/bMJiJHjvbga0Ce5YaR6oq?nav=overview)

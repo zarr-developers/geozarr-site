@@ -1,3 +1,7 @@
+---
+description: GeoZarr core conventions for CRS (geo-proj), spatial transforms, and multiscale pyramids — composable, JSON Schema-validated, and built on the Zarr Conventions Framework.
+---
+
 # Conventions
 
 GeoZarr is a set of composable [Zarr conventions](https://github.com/zarr-conventions/.github/blob/main/profile/README.md) for encoding geospatial data. Each convention addresses a single concern and can be used independently or together.
