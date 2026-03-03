@@ -7,14 +7,18 @@ hero:
   tagline: Modular, composable conventions for storing multidimensional georeferenced grids. Targeting OGC standardization.
   actions:
     - theme: brand
+      text: Join Us
+      link: /get-involved
+    - theme: alt
       text: View Conventions
       link: /conventions
     - theme: alt
       text: View Spec Repo
       link: https://github.com/zarr-developers/geozarr-spec
     - theme: alt
-      text: Join OGC SWG via Agora
+      text: Join OGC SWG
       link: https://agora.ogc.org/c/overview-716766/
+
 
 features:
   - icon: "\U0001F9E9"
