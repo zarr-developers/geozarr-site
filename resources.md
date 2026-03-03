@@ -1,3 +1,7 @@
+---
+description: GeoZarr presentations, articles, and videos — conference talks, technical blog posts, and demonstration recordings.
+---
+
 # Resources
 
 ## Presentations

@@ -1,4 +1,5 @@
 ---
+description: GeoZarr defines modular, composable Zarr conventions for storing multidimensional georeferenced grids. An emerging OGC standard for cloud-native geospatial data.
 layout: home
 
 hero:

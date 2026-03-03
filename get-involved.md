@@ -1,3 +1,7 @@
+---
+description: Contribute to GeoZarr — join the OGC Standards Working Group, attend monthly meetings, or submit pull requests. No OGC membership required.
+---
+
 # Get Involved
 
 GeoZarr welcomes contributions from anyone — OGC membership is not required.

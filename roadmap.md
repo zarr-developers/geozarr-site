@@ -1,3 +1,7 @@
+---
+description: GeoZarr V1 release roadmap — three milestones targeting OGC Architecture Board review by summer 2026.
+---
+
 # V1 Roadmap
 
 The SWG approved a V1 roadmap at the February 2026 meeting. The target is OAB review by **summer 2026**.

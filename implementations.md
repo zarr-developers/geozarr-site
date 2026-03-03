@@ -1,3 +1,7 @@
+---
+description: Libraries and tools implementing GeoZarr conventions — Python, C++, and JavaScript support across geo-proj, spatial, and multiscales.
+---
+
 # Implementations
 
 GeoZarr conventions advance in maturity through diverse implementations. The [Zarr Conventions Framework](https://github.com/zarr-conventions/.github/blob/main/profile/README.md) requires 3+ independent implementations for **Candidate** maturity.

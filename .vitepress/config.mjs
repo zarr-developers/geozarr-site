@@ -4,9 +4,14 @@ export default defineConfig({
   title: "GeoZarr",
   description:
     "Modular Zarr conventions for storing and accessing multidimensional georeferenced grids",
+  sitemap: {
+    hostname: "https://geozarr.org",
+  },
   head: [
     ["link", { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" }],
+    ["link", { rel: "canonical", href: "https://geozarr.org" }],
     ["meta", { property: "og:title", content: "GeoZarr" }],
+    ["meta", { property: "og:url", content: "https://geozarr.org" }],
     [
       "meta",
       {
