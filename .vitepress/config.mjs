@@ -47,6 +47,10 @@ export default defineConfig({
             link: "https://github.com/zarr-developers/geozarr-toolkit/",
           },
           {
+            text: "GeoZarr online validator",
+            link: "https://inspect.geozarr.org",
+          },
+          {
             text: "geozarr-examples",
             link: "https://developmentseed.org/geozarr-examples/",
           },
@@ -57,6 +61,10 @@ export default defineConfig({
           {
             text: "OGC SWG Charter",
             link: "https://github.com/zarr-developers/geozarr-spec/blob/main/CHARTER.adoc",
+          },
+          {
+            text: "SWG Meeting Minutes",
+            link: "https://hackmd.io/team/geozarr/folders/bMJiJHjvbga0Ce5YaR6oq?nav=overview",
           },
         ],
       },
