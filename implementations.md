@@ -17,7 +17,6 @@ GeoZarr conventions advance in maturity through diverse implementations. The [Za
 | [GDAL](https://gdal.org/) | C++ | Full | Full | Full |
 | [OpenLayers](https://github.com/spacebel/geozarr-openlayers) | JavaScript | Read | Read | Read |
 | [TiTiler](https://github.com/developmentseed/titiler) | Python | Read | Read | Read |
-| [qgis-geozarr](https://github.com/wietzesuijker/qgis-geozarr) | Python | Read | Read | Read |
 
 **Support levels:** Full = read/write, Read = read-only, Planned = not yet started
 
