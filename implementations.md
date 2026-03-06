@@ -14,7 +14,7 @@ GeoZarr conventions advance in maturity through diverse implementations. The [Za
 | [zarr-cm](https://github.com/zarr-conventions/zarr-cm) | Python | Full | Full | Full |
 | [geozarr-toolkit](https://github.com/developmentseed/geozarr-toolkit) | Python | In progress | In progress | In progress |
 | [rioxarray](https://github.com/corteva/rioxarray) | Python | In progress | In progress | — |
-| [GDAL](https://gdal.org/) | C++ | Planned | Planned | Planned |
+| [GDAL](https://gdal.org/) | C++ | Full | Full | Full |
 | [OpenLayers](https://github.com/spacebel/geozarr-openlayers) | JavaScript | Read | Read | Read |
 | [TiTiler](https://github.com/developmentseed/titiler) | Python | Read | Read | Read |
 
