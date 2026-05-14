@@ -30,6 +30,7 @@ export default defineConfig({
       { text: "Roadmap", link: "/roadmap" },
       { text: "Implementations", link: "/implementations" },
       { text: "Get Involved", link: "/get-involved" },
+      { text: "Minutes", link: "/minutes/" },
       { text: "FAQ", link: "/faq" },
       {
         text: "Resources",
@@ -62,15 +63,26 @@ export default defineConfig({
             text: "OGC SWG Charter",
             link: "https://github.com/zarr-developers/geozarr-spec/blob/main/CHARTER.adoc",
           },
-          {
-            text: "SWG Meeting Minutes",
-            link: "https://hackmd.io/team/geozarr/folders/bMJiJHjvbga0Ce5YaR6oq?nav=overview",
-          },
         ],
       },
     ],
 
-    sidebar: false,
+    sidebar: {
+      "/minutes/": [
+        {
+          text: "SWG Meeting Minutes",
+          items: [
+            { text: "Overview", link: "/minutes/" },
+            { text: "6 May 2026", link: "/minutes/2026-05-06" },
+            { text: "1 April 2026", link: "/minutes/2026-04-01" },
+            { text: "4 March 2026", link: "/minutes/2026-03-04" },
+            { text: "4 February 2026", link: "/minutes/2026-02-04" },
+            { text: "7 January 2026", link: "/minutes/2026-01-07" },
+            { text: "3 December 2025", link: "/minutes/2025-12-03" },
+          ],
+        },
+      ],
+    },
 
     socialLinks: [
       {
