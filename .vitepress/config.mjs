@@ -103,7 +103,7 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        "https://github.com/zarr-developers/geozarr-site/edit/main/site/:path",
+        "https://github.com/zarr-developers/geozarr-site/edit/main/:path",
       text: "Edit this page on GitHub",
     },
   },
