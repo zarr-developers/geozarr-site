@@ -1,5 +1,5 @@
 ---
-description: GeoZarr core conventions for CRS (geo-proj), spatial transforms, and multiscale pyramids — composable, JSON Schema-validated, and built on the Zarr Conventions Framework.
+description: GeoZarr core conventions for CRS (proj), spatial transforms, and multiscale pyramids — composable, JSON Schema-validated, and built on the Zarr Conventions Framework.
 ---
 
 # Conventions
@@ -10,7 +10,7 @@ GeoZarr is a set of composable [Zarr conventions](https://github.com/zarr-conven
 
 | Convention | Namespace | UUID | Purpose |
 |------------|-----------|------|---------|
-| [geo-proj](https://github.com/zarr-conventions/geo-proj) | `proj:` | `f17cb550-5864-4468-aeb7-f3180cfb622f` | CRS information via EPSG codes, WKT2, or PROJJSON |
+| [proj](https://github.com/zarr-conventions/proj) | `proj:` | `f17cb550-5864-4468-aeb7-f3180cfb622f` | CRS information via EPSG codes, WKT2, or PROJJSON |
 | [spatial](https://github.com/zarr-conventions/spatial) | `spatial:` | `689b58e2-cf7b-45e0-9fff-9cfc0883d6b4` | Affine transforms between array indices and coordinates |
 | [multiscales](https://github.com/zarr-conventions/multiscales) | `multiscales` | `d35379db-88df-4056-af3a-620245f8e347` | Pyramid structures and resolution levels |
 
@@ -26,11 +26,11 @@ Each convention is registered via the `zarr_conventions` metadata array in a Zar
 
 A single Zarr group can use multiple conventions simultaneously. For example, a geospatial dataset typically combines all three:
 
-- **geo-proj** to specify the CRS (e.g., EPSG:4326)
+- **proj** to specify the CRS (e.g., EPSG:4326)
 - **spatial** to define the affine transform from pixel to geographic coordinates
 - **multiscales** to describe a resolution pyramid
 
-The `geo-proj` and `spatial` conventions also support **inheritance** — metadata set at the group level is inherited by direct child arrays, with array-level attributes taking precedence.
+The `proj` and `spatial` conventions also support **inheritance** — metadata set at the group level is inherited by direct child arrays, with array-level attributes taking precedence.
 
 ## Additional Conventions Under Consideration
 

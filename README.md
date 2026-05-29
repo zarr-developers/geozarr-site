@@ -9,7 +9,7 @@ Built with [VitePress](https://vitepress.dev/).
 | Page | File | Description |
 |------|------|-------------|
 | Home | `index.md` | Landing page with project overview and feature highlights |
-| Conventions | `conventions.md` | Core conventions (geo-proj, spatial, multiscales) with maturity levels |
+| Conventions | `conventions.md` | Core conventions (proj, spatial, multiscales) with maturity levels |
 | Roadmap | `roadmap.md` | V1 release milestones targeting OGC standardization |
 | Implementations | `implementations.md` | Matrix of libraries and tools with feature support |
 | Get Involved | `get-involved.md` | Community links, meeting schedule, and contribution guide |
