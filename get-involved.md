@@ -37,7 +37,6 @@ Full guide: [CONTRIBUTING.md](https://github.com/zarr-developers/geozarr-spec/bl
 
 ## Monthly Meetings
 
-The SWG meets on the **first Wednesday of each month** at 15:00 UTC.
-Meetings focus on strategic discussion and topics lacking consensus.
+The SWG meets on the **first Tuesday of each month** at **9:00 AM US Eastern Time** (13:00 UTC during US daylight saving, 14:00 UTC otherwise). The 9:00 AM ET start is fixed year-round; because the UTC and local-time equivalents shift by an hour with daylight saving, the banner's [time-zone converter](https://www.timeanddate.com/worldclock/fixedtime.html?msg=GeoZarr+SWG+Meeting&p1=746) is the authoritative source. Meetings focus on strategic discussion and topics lacking consensus.
 
 **Join:** [Google Meet](https://meet.google.com/jth-rstn-fwb) · **Notes:** [Meeting Minutes](/minutes/)

@@ -65,7 +65,9 @@ const formattedDate = computed(() => {
 const timezoneLink = computed(() => {
   if (!date.value) return "#";
   const [y, m, d] = date.value.split("-");
-  return `https://www.timeanddate.com/worldclock/fixedtime.html?msg=GeoZarr+SWG+Meeting&iso=${y}${m}${d}T16&p1=1440&ah=1`;
+  // iso time is anchored to America/New_York (p1=746), so the converter stays
+  // correct across US daylight-saving changes — the meeting is fixed at 9:00 AM ET.
+  return `https://www.timeanddate.com/worldclock/fixedtime.html?msg=GeoZarr+SWG+Meeting&iso=${y}${m}${d}T09&p1=746&ah=1`;
 });
 
 function dismiss() {
@@ -74,18 +76,18 @@ function dismiss() {
 }
 
 /**
- * Returns the first-Wednesday meeting date if `now` falls on that Wednesday
+ * Returns the first-Tuesday meeting date if `now` falls on that Tuesday
  * or the day before it. Otherwise returns null.
  */
 function meetingDate(now) {
   const year = now.getFullYear();
   const month = now.getMonth();
 
-  // Find first Wednesday of this month
+  // Find first Tuesday of this month
   const first = new Date(year, month, 1);
   const dayOfWeek = first.getDay(); // 0=Sun
-  const wed = dayOfWeek <= 3 ? 1 + (3 - dayOfWeek) : 1 + (10 - dayOfWeek);
-  const meetingDay = new Date(year, month, wed);
+  const tue = dayOfWeek <= 2 ? 1 + (2 - dayOfWeek) : 1 + (9 - dayOfWeek);
+  const meetingDay = new Date(year, month, tue);
 
   const today = new Date(year, month, now.getDate());
   const diffDays = (meetingDay - today) / 86400000;
@@ -106,7 +108,7 @@ function meetingDate(now) {
           :href="timezoneLink"
           target="_blank"
           rel="noopener"
-        >16:00 UTC</a>
+        >9:00 AM ET</a>
       </span>
       <a class="meeting-banner-link" href="https://hackmd.io/OHnmcpWLTCyo7gs-0KtHPw" target="_blank" rel="noopener">Meeting details + agenda</a>
       <button class="meeting-banner-close" @click="dismiss" aria-label="Dismiss banner">&times;</button>
