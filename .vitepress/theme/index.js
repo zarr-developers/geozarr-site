@@ -2,6 +2,7 @@ import DefaultTheme from "vitepress/theme";
 import { h } from "vue";
 import RoadmapTracker from "./RoadmapTracker.vue";
 import MeetingBanner from "./MeetingBanner.vue";
+import MeetingTimeLink from "./MeetingTimeLink.vue";
 import "./style.css";
 
 export default {
@@ -13,5 +14,6 @@ export default {
   },
   enhanceApp({ app }) {
     app.component("RoadmapTracker", RoadmapTracker);
+    app.component("MeetingTimeLink", MeetingTimeLink);
   },
 };

@@ -1,5 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from "vue";
+import { toLocalISODate, nextMeeting, timezoneLink } from "./meeting.js";
 
 const now = ref(new Date());
 const dismissed = ref(false);
@@ -33,24 +34,25 @@ watch(dismissed, (val) => {
   if (val) clearHeight();
 });
 
-function toLocalISODate(d) {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
-}
-
 const date = computed(() => {
   const d = meetingDate(now.value);
   return d ? toLocalISODate(d) : null;
 });
 
-const isToday = computed(() => {
-  if (!date.value) return false;
-  return toLocalISODate(now.value) === date.value;
+const daysUntil = computed(() => {
+  if (!date.value) return null;
+  const today = new Date(toLocalISODate(now.value) + "T00:00:00");
+  const meeting = new Date(date.value + "T00:00:00");
+  return Math.round((meeting - today) / 86400000);
 });
 
-const label = computed(() => (isToday.value ? "Today" : "Tomorrow"));
+const label = computed(() => {
+  const d = daysUntil.value;
+  if (d === null) return "";
+  if (d === 0) return "Today";
+  if (d === 1) return "Tomorrow";
+  return `In ${d} days`;
+});
 
 const formattedDate = computed(() => {
   if (!date.value) return "";
@@ -62,13 +64,7 @@ const formattedDate = computed(() => {
   });
 });
 
-const timezoneLink = computed(() => {
-  if (!date.value) return "#";
-  const [y, m, d] = date.value.split("-");
-  // iso time is anchored to America/New_York (p1=746), so the converter stays
-  // correct across US daylight-saving changes — the meeting is fixed at 9:00 AM ET.
-  return `https://www.timeanddate.com/worldclock/fixedtime.html?msg=GeoZarr+SWG+Meeting&iso=${y}${m}${d}T09&p1=746&ah=1`;
-});
+const timezoneLinkHref = computed(() => timezoneLink(date.value));
 
 function dismiss() {
   dismissed.value = true;
@@ -76,23 +72,15 @@ function dismiss() {
 }
 
 /**
- * Returns the first-Tuesday meeting date if `now` falls on that Tuesday
- * or the day before it. Otherwise returns null.
+ * Returns the next first-Tuesday meeting date if `now` falls within the week
+ * leading up to it (the meeting day or up to 7 days before). Otherwise null.
  */
 function meetingDate(now) {
-  const year = now.getFullYear();
-  const month = now.getMonth();
-
-  // Find first Tuesday of this month
-  const first = new Date(year, month, 1);
-  const dayOfWeek = first.getDay(); // 0=Sun
-  const tue = dayOfWeek <= 2 ? 1 + (2 - dayOfWeek) : 1 + (9 - dayOfWeek);
-  const meetingDay = new Date(year, month, tue);
-
-  const today = new Date(year, month, now.getDate());
+  const meetingDay = nextMeeting(now);
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const diffDays = (meetingDay - today) / 86400000;
 
-  if (diffDays === 0 || diffDays === 1) {
+  if (diffDays >= 0 && diffDays <= 7) {
     return meetingDay;
   }
   return null;
@@ -105,7 +93,7 @@ function meetingDate(now) {
       <span class="meeting-banner-text">
         <strong>{{ label }}:</strong> GeoZarr SWG Monthly Meeting — {{ formattedDate }} at
         <a
-          :href="timezoneLink"
+          :href="timezoneLinkHref"
           target="_blank"
           rel="noopener"
         >9:00 AM ET</a>
