@@ -10,7 +10,7 @@ GeoZarr V1 is built on three modular, composable Zarr conventions:
 
 | Convention | Repo |
 |------------|------|
-| **geo-proj** (`proj:`) | [zarr-conventions/geo-proj](https://github.com/zarr-conventions/geo-proj) |
+| **proj** (`proj:`) | [zarr-conventions/proj](https://github.com/zarr-conventions/proj) |
 | **spatial** (`spatial:`) | [zarr-conventions/spatial](https://github.com/zarr-conventions/spatial) |
 | **multiscales** | [zarr-conventions/multiscales](https://github.com/zarr-conventions/multiscales) |
 

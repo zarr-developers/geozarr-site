@@ -32,7 +32,7 @@ features:
     title: OGC Standards Track
     details: Developed by the OGC GeoZarr Standards Working Group, targeting Architecture Board review by summer 2026.
   - icon: "\U0001F30D"
-    title: Geospatial CRS (geo-proj)
+    title: Geospatial CRS (proj)
     details: Encode coordinate reference systems via EPSG codes, WKT2, or PROJJSON using the <code>proj:</code> namespace.
   - icon: "\U0001F4D0"
     title: Spatial Transforms

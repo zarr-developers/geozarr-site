@@ -1,5 +1,5 @@
 ---
-description: Libraries and tools implementing GeoZarr conventions — Python, C++, JavaScript, and TypeScript support across geo-proj, spatial, and multiscales.
+description: Libraries and tools implementing GeoZarr conventions — Python, C++, JavaScript, and TypeScript support across proj, spatial, and multiscales.
 ---
 
 # Implementations
@@ -8,7 +8,7 @@ GeoZarr conventions advance in maturity through diverse implementations. The [Za
 
 ## Implementation Matrix
 
-| Implementation                                                        | Language   | geo-proj    | spatial     | multiscales | Notes                                                               |
+| Implementation                                                        | Language   | proj        | spatial     | multiscales | Notes                                                               |
 | --------------------------------------------------------------------- | ---------- | ----------- | ----------- | ----------- | ------------------------------------------------------------------- |
 | [eopf data-model](https://github.com/EOPF-Explorer/data-model)        | Python     | Full        | Full        | Full        | Reference implementation for EOPF Sentinel data                     |
 | [zarr-cm](https://github.com/zarr-conventions/zarr-cm)                | Python     | Full        | Full        | Full        | Zero-dependency conventions metadata library                        |
@@ -26,7 +26,7 @@ GeoZarr conventions advance in maturity through diverse implementations. The [Za
 
 ### GDAL
 
-The GDAL Zarr driver (v3.13+) supports read/write of `geo-proj`, `spatial`, and `multiscales` conventions for Zarr V3. Key features include sharded storage, parallel chunk decompression, and `BuildOverviews` for multiscale pyramid generation. Use the `GEOREFERENCING_CONVENTION=SPATIAL_PROJ` creation option to write GeoZarr conventions.
+The GDAL Zarr driver (v3.13+) supports read/write of `proj`, `spatial`, and `multiscales` conventions for Zarr V3. Key features include sharded storage, parallel chunk decompression, and `BuildOverviews` for multiscale pyramid generation. Use the `GEOREFERENCING_CONVENTION=SPATIAL_PROJ` creation option to write GeoZarr conventions.
 
 - [Driver documentation](https://gdal.org/en/latest/drivers/raster/zarr.html)
 - [GDAL Zarr contributions by wietzesuijker](https://github.com/OSGeo/gdal/issues?q=author%3Awietzesuijker) — 20+ PRs for sharding write, shard index caching, parallel decompression, and multiscales support
@@ -71,7 +71,7 @@ QGIS plugin for loading cloud-native Zarr data from STAC catalogs. Features band
 
 ## Production Deployments
 
-| Deployment                                            | Stack                | geo-proj | spatial | multiscales | Notes                                                                                                                                                               |
+| Deployment                                            | Stack                | proj | spatial | multiscales | Notes                                                                                                                                                               |
 | ----------------------------------------------------- | -------------------- | -------- | ------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [EOPF Explorer](https://explorer.eopf.copernicus.eu/) | OpenLayers + TiTiler | Read     | Read    | Read        | First production adoption for Sentinel-2 L2A data; serves sharded Zarr v3 with GeoZarr conventions via [STAC catalog](https://api.explorer.eopf.copernicus.eu/stac) |
 
