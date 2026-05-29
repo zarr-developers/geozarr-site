@@ -13,6 +13,15 @@ export function firstTuesday(year, month) {
   return new Date(year, month, tue);
 }
 
+// Next first-Tuesday meeting that is today or in the future. Rolls into the
+// following month once the current month's meeting has passed.
+export function nextMeeting(now) {
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+  let d = firstTuesday(now.getFullYear(), now.getMonth());
+  if (d < today) d = firstTuesday(now.getFullYear(), now.getMonth() + 1);
+  return d;
+}
+
 // Builds the timeanddate.com converter URL anchored to 9:00 AM in
 // America/New_York (p1=746), so it stays correct across US daylight-saving
 // changes — the meeting is fixed at 9:00 AM ET.

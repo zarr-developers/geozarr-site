@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from "vue";
-import { toLocalISODate, firstTuesday, timezoneLink } from "./meeting.js";
+import { toLocalISODate, nextMeeting, timezoneLink } from "./meeting.js";
 
 const now = ref(new Date());
 const dismissed = ref(false);
@@ -72,11 +72,11 @@ function dismiss() {
 }
 
 /**
- * Returns the first-Tuesday meeting date if `now` falls within the week leading
- * up to it (the meeting day or up to 7 days before). Otherwise returns null.
+ * Returns the next first-Tuesday meeting date if `now` falls within the week
+ * leading up to it (the meeting day or up to 7 days before). Otherwise null.
  */
 function meetingDate(now) {
-  const meetingDay = firstTuesday(now.getFullYear(), now.getMonth());
+  const meetingDay = nextMeeting(now);
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
   const diffDays = (meetingDay - today) / 86400000;
 
