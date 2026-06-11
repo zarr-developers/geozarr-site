@@ -16,8 +16,10 @@ GeoZarr conventions advance in maturity through diverse implementations. The [Za
 | [rioxarray](https://github.com/corteva/rioxarray)                     | Python     | Full (Write TBR)        | Full (Write TBR)       | —           | Read/write via `Convention.Zarr`                                    |
 | [geozarr-toolkit](https://github.com/zarr-developers/geozarr-toolkit) | Python     | In progress | In progress | In progress | CLI (`geozarr validate`, `geozarr info`) and FastAPI service        |
 | [OpenLayers](https://openlayers.org/en/latest/examples/geozarr.html)  | JavaScript | Read        | Read        | Read        | `ol/source/GeoZarr`; experimental; requires ol ≥ 10.8.0             |
+| [STAC Browser](https://radiantearth.github.io/stac-browser/)          | JavaScript | Read        | Read        | Read        | Browses STAC catalogs; renders GeoZarr assets via OpenLayers (ol-stac) |
 | [TiTiler (via EOPF)](https://github.com/EOPF-Explorer/titiler-eopf)   | Python     | Read        | Read        | Read        | GeoZarr Reader                                                      |
 | [zarr-layer](https://github.com/carbonplan/zarr-layer)                | TypeScript | Read        | Read        | Read        | MapLibre/Mapbox rendering; arbitrary CRS via proj4; v0.4.3          |
+| [deck.gl-raster](https://github.com/developmentseed/deck.gl-raster)   | TypeScript | Read        | Read        | Read        | GPU/WebGL2 rendering in deck.gl; own `@developmentseed/geozarr` parser |
 | [QGIS GeoZarr](https://plugins.qgis.org/plugins/qgis_geozarr/)        | Python     | Read        | Read        | Read        | Plugin with band selection, satellite presets; requires GDAL 3.13   |
 
 **Support levels:** Full = read/write, Read = read-only, In progress = under active development
@@ -53,6 +55,15 @@ The `ol/source/GeoZarr` source reads GeoZarr groups with multiscales support dir
 - [Example](https://openlayers.org/en/latest/examples/geozarr.html)
 - [Source code](https://github.com/spacebel/geozarr-openlayers)
 
+### STAC Browser
+
+Vue.js application for browsing and searching STAC APIs and static catalogs. Renders GeoZarr assets from STAC Items directly in the browser via [ol-stac](https://ol-stac.moregeo.it/) (OpenLayers STAC), which builds on the OpenLayers GeoZarr source (`ol/source/GeoZarr`).
+
+- [Live app](https://radiantearth.github.io/stac-browser/)
+- [GitHub](https://github.com/radiantearth/stac-browser)
+- [Example: EOPF Sentinel-2 L2A item](https://radiantearth.github.io/stac-browser/#/external/api.explorer.eopf.copernicus.eu/stac/collections/sentinel-2-l2a-staging/items/S2B_MSIL2A_20260414T104619_N0512_R051_T31UGV_20260414T131939)
+- [ol-stac GeoZarr rendering example](https://ol-stac.moregeo.it/en/latest/examples/stac-item-zarr.html)
+
 ### zarr-layer
 
 Custom MapLibre/Mapbox layer for rendering Zarr datasets, supporting Zarr v2 and v3, arbitrary CRS reprojection via proj4, multi-band custom shaders, globe rendering, and querying.
@@ -60,6 +71,14 @@ Custom MapLibre/Mapbox layer for rendering Zarr datasets, supporting Zarr v2 and
 - [GitHub](https://github.com/carbonplan/zarr-layer)
 - [Demo](https://zarr-layer.demo.carbonplan.org/)
 - [Pangeo Showcase presentation](https://decks.carbonplan.org/pangeo-showcase/03-11-26)
+
+### deck.gl-raster
+
+GPU-accelerated (WebGL2) rendering of GeoTIFF, COG, and Zarr in deck.gl, entirely client-side with no server. Its `@developmentseed/geozarr` package independently parses and validates the `spatial`, `geo-proj`, and `multiscales` conventions — multiscale layout, per-level affine transforms, array shapes, axis labels, and CRS — into a typed `GeoZarrMetadata` value, with no rendering or I/O dependencies.
+
+- [GitHub](https://github.com/developmentseed/deck.gl-raster)
+- [Documentation](https://developmentseed.org/deck.gl-raster/)
+- [`@developmentseed/geozarr` metadata package](https://developmentseed.org/deck.gl-raster/api/geozarr/)
 
 ### QGIS GeoZarr
 
