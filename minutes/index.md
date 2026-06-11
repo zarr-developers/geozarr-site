@@ -4,7 +4,7 @@ description: Public minutes of GeoZarr SWG monthly meetings.
 
 # SWG Meeting Minutes
 
-Public minutes from the GeoZarr Standards Working Group monthly meetings. The SWG meets on the **first Wednesday of each month** at 15:00 UTC; see [Get Involved](/get-involved#monthly-meetings) for joining details.
+Public minutes from the GeoZarr Standards Working Group monthly meetings. The SWG meets on the **first Tuesday of each month** at **9:00 AM US Eastern Time**; see [Get Involved](/get-involved#monthly-meetings) for joining details and the authoritative time-zone converter.
 
 ## 2026
 
