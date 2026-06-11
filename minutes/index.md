@@ -10,6 +10,7 @@ Public minutes from the GeoZarr Standards Working Group monthly meetings. The SW
 
 | Date | Summary |
 |------|---------|
+| [2 June 2026](/minutes/2026-06-02) | Coordinate conventions: Christophe's composable `coords` vs. Patrick's OGC/CF-based `CS`; SWG charter to define scope and design philosophy |
 | [6 May 2026](/minutes/2026-05-06) | Convention governance, Proj/Spatial/Multiscales for V1, GeoZarr–CF roadmap, CS convention for Sentinel-1 |
 | [1 April 2026](/minutes/2026-04-01) | CF alignment paths, V1 RC timeline and GDAL 3.11, I-ADOPT semantics, Helsinki coordination |
 | [4 March 2026](/minutes/2026-03-04) | CF alignment active, V1 RC implementation risk, OGC IP-clause concerns, public website / validator / `geozarr-toolkit` launched |
