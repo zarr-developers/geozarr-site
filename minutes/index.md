@@ -10,6 +10,7 @@ Public minutes from the GeoZarr Standards Working Group monthly meetings. The SW
 
 | Date | Summary |
 |------|---------|
+| [7 July 2026](/minutes/2026-07-07) | Revised SWG charter draft opened for comment, Julia implementation of multiscales, spatial/coords feedback, community-process concerns |
 | [2 June 2026](/minutes/2026-06-02) | Coordinate conventions: Christophe's composable `coords` vs. Patrick's OGC/CF-based `CS`; SWG charter to define scope and design philosophy |
 | [6 May 2026](/minutes/2026-05-06) | Convention governance, Proj/Spatial/Multiscales for V1, GeoZarr–CF roadmap, CS convention for Sentinel-1 |
 | [1 April 2026](/minutes/2026-04-01) | CF alignment paths, V1 RC timeline and GDAL 3.11, I-ADOPT semantics, Helsinki coordination |
