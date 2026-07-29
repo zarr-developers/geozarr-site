@@ -98,7 +98,7 @@ function meetingDate(now) {
           rel="noopener"
         >9:00 AM ET</a>
       </span>
-      <a class="meeting-banner-link" href="https://hackmd.io/OHnmcpWLTCyo7gs-0KtHPw" target="_blank" rel="noopener">Meeting details + agenda</a>
+      <a class="meeting-banner-link" href="https://docs.google.com/document/d/1LLbp4HdB6rjanOAlXGf6t-7dMuICBKx4YLvZJyjkfw0/edit" target="_blank" rel="noopener">Meeting details + agenda</a>
       <button class="meeting-banner-close" @click="dismiss" aria-label="Dismiss banner">&times;</button>
     </div>
   </div>
