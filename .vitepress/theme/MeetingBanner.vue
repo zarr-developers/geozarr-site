@@ -111,7 +111,10 @@ function meetingDate(now) {
   right: 0;
   left: 0;
   z-index: var(--vp-z-index-layout-top);
-  background: var(--vp-c-brand-soft);
+  /* --vp-c-brand-soft is translucent; layer it over the opaque page background
+     so scrolled content doesn't show through the fixed banner. */
+  background: linear-gradient(var(--vp-c-brand-soft), var(--vp-c-brand-soft))
+    var(--vp-c-bg);
   border-bottom: 1px solid var(--vp-c-brand-1);
   padding: 8px 16px;
   text-align: center;
