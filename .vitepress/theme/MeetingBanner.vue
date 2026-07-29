@@ -99,6 +99,7 @@ function meetingDate(now) {
         >9:00 AM ET</a>
       </span>
       <a class="meeting-banner-link" href="https://docs.google.com/document/d/1LLbp4HdB6rjanOAlXGf6t-7dMuICBKx4YLvZJyjkfw0/edit" target="_blank" rel="noopener">Meeting details + agenda</a>
+      <a class="meeting-banner-link" href="https://calendar.google.com/calendar/r?cid=Y19mYjQzMmY1YmQ1N2ZkOTJiMzIwOTJmNTY1YjdiNDlmYmE4YjM1OGI5MWFiMGY4MmI1OGExZThhMmQ3ZDdjODRkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener">Add to calendar</a>
       <button class="meeting-banner-close" @click="dismiss" aria-label="Dismiss banner">&times;</button>
     </div>
   </div>
