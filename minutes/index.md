@@ -10,18 +10,20 @@ Public minutes from the GeoZarr Standards Working Group monthly meetings. The SW
 
 | Date | Summary |
 |------|---------|
+| [1 September 2026](/minutes/2026-09-01) | Proposal to release 1.0 on the current conventions with explicit coordinates as 1.1, working-session findings, CNES format decision framework and benchmarks, ESA EOPF renewal, recharter vote to be called |
+| [4 August 2026](/minutes/2026-08-04) | Revised charter: capabilities table retained with prior art consolidated in, V1 targets under Initial Deliverables, OMS as a composable convention, two-week comment period ahead; rioxarray 0.23 GeoZarr write support |
 | [7 July 2026](/minutes/2026-07-07) | Revised SWG charter draft opened for comment, Julia implementation of multiscales, spatial/coords feedback, community-process concerns |
 | [2 June 2026](/minutes/2026-06-02) | Coordinate conventions: Christophe's composable `coords` vs. Patrick's OGC/CF-based `CS`; SWG charter to define scope and design philosophy |
 | [6 May 2026](/minutes/2026-05-06) | Convention governance, Proj/Spatial/Multiscales for V1, GeoZarr–CF roadmap, CS convention for Sentinel-1 |
 | [1 April 2026](/minutes/2026-04-01) | CF alignment paths, V1 RC timeline and GDAL 3.11, I-ADOPT semantics, Helsinki coordination |
 | [4 March 2026](/minutes/2026-03-04) | CF alignment active, V1 RC implementation risk, OGC IP-clause concerns, public website / validator / `geozarr-toolkit` launched |
-| [4 February 2026](/minutes/2026-02-04) | V1 roadmap approved, CF alignment leads volunteered, EOPF Explorer V1 launched, new observational metadata and CRS requirements |
+| [4 February 2026](/minutes/2026-02-04) | V1 roadmap proposed as strawman, CF alignment leads volunteered, EOPF Explorer V1 launched, new observational metadata and CRS requirements |
 | [7 January 2026](/minutes/2026-01-07) | Conventions adoption (OpenLayers, TiTiler, EOPF), CF community-engagement risk, strawman proposal path, QGIS plugin |
 
 ## 2025
 
 | Date | Summary |
 |------|---------|
-| [3 December 2025](/minutes/2025-12-03) | Shift to composable Zarr Conventions, GeoProj + Multiscales RC by 15 Dec, interim co-chair Max Jones, async PR review |
+| [3 December 2025](/minutes/2025-12-03) | Shift to composable Zarr Conventions, GeoProj + Multiscales RCs by mid-December, interim co-chair Max Jones, async PR review |
 
 Earlier minutes are progressively being migrated from the [SWG HackMD folder](https://hackmd.io/team/geozarr/folders/bMJiJHjvbga0Ce5YaR6oq?nav=overview). Corrections to any published page are welcome via the *Edit this page* link.
