@@ -1,8 +1,13 @@
 ---
-description: GeoZarr presentations, articles, and videos — conference talks, technical blog posts, and demonstration recordings.
+description: GeoZarr SWG governance documents, presentations, articles, and videos.
 ---
 
 # Resources
+
+## Governance
+
+- [GeoZarr SWG charter (OGC 23-046, approved December 2023)](https://github.com/zarr-developers/geozarr-spec/blob/main/CHARTER.adoc) — the charter currently in force
+- [Revised charter draft (under review)](https://github.com/zarr-developers/geozarr-spec/blob/revised_charter/geozarr_swg_charter.md) — the re-charter proposed in [geozarr-spec#145](https://github.com/zarr-developers/geozarr-spec/pull/145). Comment on the pull request or email the chair
 
 ## Presentations
 
