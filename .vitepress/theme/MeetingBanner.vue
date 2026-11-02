@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, onUnmounted, watch, nextTick } from "vue";
-import { toLocalISODate, nextMeeting, timezoneLink } from "./meeting.js";
+import { toLocalISODate, nextMeeting, timezoneLink, meetingTimeLabel } from "./meeting.js";
 
 const now = ref(new Date());
 const dismissed = ref(false);
@@ -65,6 +65,7 @@ const formattedDate = computed(() => {
 });
 
 const timezoneLinkHref = computed(() => timezoneLink(date.value));
+const timeLabel = computed(() => meetingTimeLabel(date.value));
 
 function dismiss() {
   dismissed.value = true;
@@ -72,7 +73,7 @@ function dismiss() {
 }
 
 /**
- * Returns the next first-Tuesday meeting date if `now` falls within the week
+ * Returns the next meeting date if `now` falls within the week
  * leading up to it (the meeting day or up to 7 days before). Otherwise null.
  */
 function meetingDate(now) {
@@ -96,7 +97,7 @@ function meetingDate(now) {
           :href="timezoneLinkHref"
           target="_blank"
           rel="noopener"
-        >9:00 AM ET</a>
+        >{{ timeLabel }}</a>
       </span>
       <a class="meeting-banner-link" href="https://docs.google.com/document/d/1LLbp4HdB6rjanOAlXGf6t-7dMuICBKx4YLvZJyjkfw0/edit" target="_blank" rel="noopener">Meeting details + agenda</a>
       <a class="meeting-banner-link" href="https://calendar.google.com/calendar/r?cid=Y19mYjQzMmY1YmQ1N2ZkOTJiMzIwOTJmNTY1YjdiNDlmYmE4YjM1OGI5MWFiMGY4MmI1OGExZThhMmQ3ZDdjODRkQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20" target="_blank" rel="noopener">Add to calendar</a>
