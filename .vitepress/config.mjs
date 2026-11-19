@@ -73,6 +73,9 @@ export default defineConfig({
           text: "SWG Meeting Minutes",
           items: [
             { text: "Overview", link: "/minutes/" },
+            { text: "6 October 2026", link: "/minutes/2026-10-06" },
+            { text: "1 September 2026", link: "/minutes/2026-09-01" },
+            { text: "4 August 2026", link: "/minutes/2026-08-04" },
             { text: "7 July 2026", link: "/minutes/2026-07-07" },
             { text: "2 June 2026", link: "/minutes/2026-06-02" },
             { text: "6 May 2026", link: "/minutes/2026-05-06" },

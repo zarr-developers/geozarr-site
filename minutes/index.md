@@ -10,6 +10,9 @@ Public minutes from the GeoZarr Standards Working Group monthly meetings. The SW
 
 | Date | Summary |
 |------|---------|
+| [6 October 2026](/minutes/2026-10-06) | CF community workshop report, EOPF outputs GeoZarr-compliant, proposal to proceed with V1 of proj, spatial and multiscales with an SWG vote targeted for December, charter to be finalized first |
+| [1 September 2026](/minutes/2026-09-01) | Proposal to release 1.0 on the current conventions with explicit coordinates as 1.1, working-session findings, member updates, recharter vote to be called |
+| [4 August 2026](/minutes/2026-08-04) | Revised charter review: capabilities table retained with prior art consolidated in, V1 targets under Initial Deliverables, OMS as related art with a follow-up call; rioxarray 0.23 GeoZarr write support |
 | [7 July 2026](/minutes/2026-07-07) | Revised SWG charter draft opened for comment, Julia implementation of multiscales, spatial/coords feedback, community-process concerns |
 | [2 June 2026](/minutes/2026-06-02) | Coordinate conventions: Christophe's composable `coords` vs. Patrick's OGC/CF-based `CS`; SWG charter to define scope and design philosophy |
 | [6 May 2026](/minutes/2026-05-06) | Convention governance, Proj/Spatial/Multiscales for V1, GeoZarr–CF roadmap, CS convention for Sentinel-1 |
