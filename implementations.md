@@ -13,6 +13,7 @@ GeoZarr conventions advance in maturity through diverse implementations. The [Za
 | [eopf data-model](https://github.com/EOPF-Explorer/data-model)        | Python     | Full        | Full        | Full        | Reference implementation for EOPF Sentinel data                     |
 | [zarr-cm](https://github.com/zarr-conventions/zarr-cm)                | Python     | Full        | Full        | Full        | Zero-dependency conventions metadata library                        |
 | [GDAL](https://gdal.org/en/latest/drivers/raster/zarr.html)           | C++        | Full        | Full        | Full        | Read/write in 3.13; `GEOREFERENCING_CONVENTION=SPATIAL_PROJ` option |
+| [geozarr](https://cran.r-project.org/package=geozarr)                 | R          | Full        | Full        | Full        | Full support for GeoZarr v1 conventions and several others          |
 | [rioxarray](https://github.com/corteva/rioxarray)                     | Python     | Full (Write TBR)        | Full (Write TBR)       | —           | Read/write via `Convention.Zarr`                                    |
 | [geozarr-toolkit](https://github.com/zarr-developers/geozarr-toolkit) | Python     | In progress | In progress | In progress | CLI (`geozarr validate`, `geozarr info`) and FastAPI service        |
 | [OpenLayers](https://openlayers.org/en/latest/examples/geozarr.html)  | JavaScript | Read        | Read        | Read        | `ol/source/GeoZarr`; experimental; requires ol ≥ 10.8.0             |
@@ -39,6 +40,13 @@ rioxarray (v0.22+) supports reading and will support writing in next release CRS
 
 - [GitHub](https://github.com/corteva/rioxarray)
 - [Proposal and discussion](https://github.com/corteva/rioxarray/issues/882)
+
+### geozarr
+
+R package `geozarr` (v0.4.0) supports the full suite of GeoZarr v1 conventions, as well as read/write support for the `cs` convention and friends `ref`, `geolocation` and `uom`. It can convert CF-encoded netCDF files to GeoZarr, fully preserving coordinate system features and without loss of semantic meaning (for mainstream CF constructs). Multiple netCDF files can be aggregated into a single Zarr store or array such that long time-series of e.g. CMIP6 climate projection data can be made.
+
+- [CRAN](https://cran.r-project.org/package=geozarr)
+- [GitHub](https://github.com/R-CF/geozarr)
 
 ### eopf data-model
 
